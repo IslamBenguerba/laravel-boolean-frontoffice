@@ -20,6 +20,7 @@ export default{
 
 <template>
 <router-view></router-view>
+<h1>CAZZO</h1>
 </template>
 
 <style lang="scss">
