@@ -20,7 +20,8 @@ export default{
 <button class="btn" :class="classe"> Ciaone {{ text }}</button>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+    @use "../../scss/partials/mixins" as *;
+    @use "../../scss/partials/variables" as *;
 
 </style>
