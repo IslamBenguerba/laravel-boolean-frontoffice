@@ -50,6 +50,7 @@
     height: 300px;
     width: 350px;
     position: relative;
+    border-radius: 50px;
   }
 
   .top-container {                                  //CONTENITORI SUPERIORI
@@ -64,7 +65,7 @@
     background-image: url('../assets/placeholder\ img.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 0 15px 0 15px;
+    border-radius: 15px 0 0 0;
   }
   
   .details-container {
@@ -82,6 +83,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid black;
   }
 
   .hidden-container {
@@ -122,6 +124,6 @@
     background-color: $color-text-light;
     width: 280px;
     height: 100%;
-    border-radius: 0 15px 15px 15px;
+    border-radius: 15px 0 15px 0;
   }
 </style>
