@@ -3,23 +3,24 @@ import Home from "./pages/Home.vue"
 import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 
-import TheNavbar from "./components/TheNavbar.vue"
+import TheHeader from "./components/TheHeader.vue"
 
 import Button from "./components/Button.vue"
 import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
 import MediumCard from "./components/MediumCard.vue"
 
-export default{
+export default {
   components:{
     Home,
     Contacts,
     AboutUs,
-    TheNavbar,
+    TheHeader,
     Button,
     Card,
     LightCard,
-    MediumCard
+    MediumCard,
+    TheHeader
 },
   data(){
 
@@ -36,12 +37,7 @@ export default{
   <div class="main-container">
     <router-view></router-view>
 
-    <h1>TEST</h1>
-    <Button classe="bg-danger" text="oooo"></Button>
-
-    <div class="placeholder-small-padding"></div>
-
-    <TheNavbar></TheNavbar>
+    <TheHeader></TheHeader>
 
     <div class="placeholder-padding">             <!-- placeholder-->
       <Card></Card>
@@ -71,4 +67,17 @@ export default{
   }
 </style>
 
-<!-- settare il logo e scegliere i dati da mettere nelle navbar -->
+<!--
+  TO DO LIST:
+
+  IMPORTANTE:
+  -aggiungere la rotta delle pagine al tag <a> nella <NavbarLinks>
+
+  MEDIA IMPORTANZA:  
+  -<interaction-container> deve sparire e non sovrapporsi a media queries più basse
+  -<links-container> non è verticalmente centrato
+
+  NON IMPORTANTE:
+  -non scordarsi di scegliere un logo più bello all'interno della <NavbarInfo>
+
+-->

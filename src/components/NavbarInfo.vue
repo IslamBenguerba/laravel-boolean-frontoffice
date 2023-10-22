@@ -49,7 +49,7 @@
 
   .navbar-main-container {
     @include flex-between-center;
-    height: 100px;
+    height: 95px;
     border-bottom: 1px solid $color-text-light;
     color: $color-text-light;
   }
@@ -81,7 +81,7 @@
   .logo-box {
     height: 75px;
     aspect-ratio: 1/1;
-    background-image: url('../assets/blob-haikei.svg');         //placeholer
+    background-image: url('../assets/placeholder-logo.svg');         //placeholer
   }
 
   .name-container {
