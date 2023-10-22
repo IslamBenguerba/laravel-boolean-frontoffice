@@ -2,15 +2,25 @@
 import Home from "./pages/Home.vue"
 import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
-import ButtonVue from "./components/Button.vue"
+
+import TheNavbar from "./components/TheNavbar.vue"
+
+import Button from "./components/Button.vue"
+import Card from "./components/Card.vue"
+import LightCard from "./components/LightCard.vue"
+import MediumCard from "./components/MediumCard.vue"
 
 export default{
   components:{
     Home,
     Contacts,
     AboutUs,
-    ButtonVue
-  },
+    TheNavbar,
+    Button,
+    Card,
+    LightCard,
+    MediumCard
+},
   data(){
 
   },
@@ -23,12 +33,42 @@ export default{
 
 
 <template>
-<router-view></router-view>
-<h1>CAZZO</h1>
-<ButtonVue classe=" bg-danger" text="oooo"></ButtonVue>
+  <div class="main-container">
+    <router-view></router-view>
 
+    <h1>TEST</h1>
+    <Button classe="bg-danger" text="oooo"></Button>
+
+    <div class="placeholder-small-padding"></div>
+
+    <TheNavbar></TheNavbar>
+
+    <div class="placeholder-padding">             <!-- placeholder-->
+      <Card></Card>
+      <LightCard></LightCard>
+      <MediumCard></MediumCard>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
+  @use "../scss/partials/mixins" as *;
+  @use "../scss/partials/variables" as *;
 
+  .main-container {
+    background-color: $color-section-light;
+    padding: 0 3rem;
+  }
+
+  .placeholder-padding {                  //placeholder
+    padding: 5rem 0;
+    display: flex;
+    gap: 5rem;
+  }
+
+  .placeholder-small-padding {
+    padding: 1rem 0;
+  }
 </style>
+
+<!-- settare il logo e scegliere i dati da mettere nelle navbar -->

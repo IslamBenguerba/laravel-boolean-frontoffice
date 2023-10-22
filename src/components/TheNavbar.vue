@@ -1,0 +1,21 @@
+<script>
+  import NavbarInfo from './NavbarInfo.vue';
+  import NavbarLinks from './NavbarLinks.vue';
+
+  export default {
+    components: {
+      NavbarInfo,
+      NavbarLinks,
+    }
+  }
+</script>
+
+<template>
+  <NavbarInfo></NavbarInfo>
+  <NavbarLinks></NavbarLinks>
+</template>
+
+<style scoped lang="scss">
+  @use "../../scss/partials/mixins" as *;
+  @use "../../scss/partials/variables" as *;
+</style>
