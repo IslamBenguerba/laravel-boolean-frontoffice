@@ -45,6 +45,7 @@
 
   .description-container {
     height: 100px;
+    background-color: $color-section-dark;
     color: $color-text-light;
     border-right: 1px solid $color-text-light;
     border-bottom: 1px solid $color-text-light;
