@@ -71,7 +71,6 @@ export default {
   TO DO LIST:
 
   IMPORTANTE:
-  -non funziona il <Button> nel <NavbarLinks>
   -aggiungere la rotta delle pagine al tag <a> nella <NavbarLinks>
 
   MEDIA IMPORTANZA:  

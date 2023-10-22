@@ -2,7 +2,7 @@
   import Button from './Button.vue';
 
   export default {
-    component: {
+    components: {
       Button,
     },
     data() {
@@ -39,7 +39,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
         </div>
-        <Button></Button>                                 <!-- non funziona -->
+        <Button text="book a table"></Button>
       </div>
     </div>
   </div>
