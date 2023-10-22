@@ -39,7 +39,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
         </div>
-        <Button text="book a table"></Button>
+        <Button classe="dark-button" text="book a table"></Button>
       </div>
     </div>
   </div>
