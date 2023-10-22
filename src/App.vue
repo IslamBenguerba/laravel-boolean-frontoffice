@@ -4,7 +4,8 @@ import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 import Button from "./components/Button.vue"
 import Card from "./components/Card.vue"
-import LighterCard from "./components/LighterCard.vue"
+import LightCard from "./components/LightCard.vue"
+import MediumCard from "./components/MediumCard.vue"
 
 export default{
   components:{
@@ -13,7 +14,8 @@ export default{
     AboutUs,
     Button,
     Card,
-    LighterCard
+    LightCard,
+    MediumCard
 },
   data(){
 
@@ -30,15 +32,13 @@ export default{
   <div class="main-container">
     <router-view></router-view>
 
-    <h1>CAZZO</h1>
+    <h1>TEST</h1>
     <Button classe="bg-danger" text="oooo"></Button>
 
     <div class="placeholder-padding">             <!-- placeholder-->
       <Card></Card>
-    </div>
-
-    <div class="placeholder-padding">             <!-- placeholder -->
-      <LighterCard></LighterCard>
+      <LightCard></LightCard>
+      <MediumCard></MediumCard>
     </div>
   </div>
 </template>
@@ -53,5 +53,7 @@ export default{
 
   .placeholder-padding {                  //placeholder
     padding: 5rem;
+    display: flex;
+    gap: 5rem;
   }
 </style>
