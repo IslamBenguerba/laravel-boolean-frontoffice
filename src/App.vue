@@ -19,7 +19,7 @@ export default{
     Button,
     Card,
     LightCard,
-    MediumCard
+    MediumCard,
 },
   data(){
 
@@ -66,4 +66,18 @@ export default{
   }
 </style>
 
-<!-- settare il logo e scegliere i dati da mettere nelle navbar -->
+<!--
+  TO DO LIST:
+
+  IMPORTANTE:
+  -non funziona il <Button> nel <NavbarLinks>
+  -aggiungere la rotta delle pagine al tag <a> nella <NavbarLinks>
+
+  MEDIA IMPORTANZA:  
+  -<interaction-container> deve sparire e non sovrapporsi a media queries più basse
+  -<links-container> non è verticalmente centrato
+
+  NON IMPORTANTE:
+  -non scordarsi di scegliere un logo più bello all'interno della <NavbarInfo>
+
+-->
