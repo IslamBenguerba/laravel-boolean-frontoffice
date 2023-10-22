@@ -4,7 +4,7 @@ export default{
     props:
     {
         text :'',
-        classe:''
+        classe:'',
     },
     data(){
         return{
