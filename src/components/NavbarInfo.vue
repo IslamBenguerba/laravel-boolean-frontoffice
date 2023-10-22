@@ -81,7 +81,7 @@
   .logo-box {
     height: 75px;
     aspect-ratio: 1/1;
-    background-image: url('../assets/blob-haikei.svg');         //placeholer
+    background-image: url('../assets/placeholder-logo.svg');         //placeholer
   }
 
   .name-container {

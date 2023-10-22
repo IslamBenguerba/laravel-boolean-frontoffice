@@ -36,11 +36,6 @@ export default{
   <div class="main-container">
     <router-view></router-view>
 
-    <h1>TEST</h1>
-    <Button classe="bg-danger" text="oooo"></Button>
-
-    <div class="placeholder-small-padding"></div>
-
     <TheNavbar></TheNavbar>
 
     <div class="placeholder-padding">             <!-- placeholder-->
