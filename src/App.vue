@@ -65,10 +65,6 @@ export default {
     display: flex;
     gap: 5rem;
   }
-
-  .placeholder-small-padding {
-    padding: 1rem 0;
-  }
 </style>
 
 <!--
