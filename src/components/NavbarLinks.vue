@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="main-container">
+  <div class="navbar-main-container">
 
   </div>
 </template>
@@ -14,7 +14,7 @@
   @use "../../scss/partials/mixins" as *;
   @use "../../scss/partials/variables" as *;
 
-  .main-container {
+  .navbar-main-container {
     height: 50px;
   }
 </style>
