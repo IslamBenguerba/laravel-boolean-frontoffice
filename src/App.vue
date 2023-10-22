@@ -4,7 +4,7 @@ import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 
 import TheHeader from "./components/TheHeader.vue"
-import CocktailPreview from "./components/CocktailPreview.vue"
+import TheMain from "./components/TheMain.vue"
 
 import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
@@ -12,12 +12,12 @@ import MediumCard from "./components/MediumCard.vue"
 import Button from "./components/Button.vue"
 
 export default {
-  components:{
+  components: {
     Home,
     Contacts,
     AboutUs,
     TheHeader,
-    CocktailPreview,
+    TheMain,
     Card,
     LightCard,
     MediumCard,
@@ -40,13 +40,14 @@ export default {
 
     <TheHeader></TheHeader>
 
-    <CocktailPreview></CocktailPreview>
+    <TheMain></TheMain>
 
-    <div class="placeholder-padding">             <!-- placeholder-->
+    <div class="placeholder-padding">             <!-- placeholder. Da eliminare div e tutte le card-->
       <Card></Card>
       <LightCard></LightCard>
       <MediumCard></MediumCard>
     </div>
+
   </div>
 </template>
 

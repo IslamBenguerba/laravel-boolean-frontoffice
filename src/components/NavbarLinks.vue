@@ -50,7 +50,7 @@
   @use "../../scss/partials/variables" as *;
 
   .navbar-main-container {
-    height: 50px;    
+    height: 50px;
   }
 
   .navbar-links-container {
