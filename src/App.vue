@@ -4,11 +4,12 @@ import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 
 import TheHeader from "./components/TheHeader.vue"
+import CocktailPreview from "./components/CocktailPreview.vue"
 
-import Button from "./components/Button.vue"
 import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
 import MediumCard from "./components/MediumCard.vue"
+import Button from "./components/Button.vue"
 
 export default {
   components:{
@@ -16,11 +17,11 @@ export default {
     Contacts,
     AboutUs,
     TheHeader,
-    Button,
+    CocktailPreview,
     Card,
     LightCard,
     MediumCard,
-    TheHeader
+    Button,
 },
   data(){
 
@@ -38,6 +39,8 @@ export default {
     <router-view></router-view>
 
     <TheHeader></TheHeader>
+
+    <CocktailPreview></CocktailPreview>
 
     <div class="placeholder-padding">             <!-- placeholder-->
       <Card></Card>
