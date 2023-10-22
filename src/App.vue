@@ -4,6 +4,7 @@ import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 import Button from "./components/Button.vue"
 import Card from "./components/Card.vue"
+import LighterCard from "./components/LighterCard.vue"
 
 export default{
   components:{
@@ -11,7 +12,8 @@ export default{
     Contacts,
     AboutUs,
     Button,
-    Card
+    Card,
+    LighterCard
 },
   data(){
 
@@ -32,6 +34,10 @@ export default{
 
   <div class="placeholder-padding">             <!-- placeholder-->
     <Card></Card>
+  </div>
+
+  <div class="placeholder-padding">             <!-- placeholder -->
+    <LighterCard></LighterCard>
   </div>
 
 </template>
