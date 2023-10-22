@@ -4,7 +4,7 @@ import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 
 import TheNavbar from "./components/TheNavbar.vue"
-
+import TheFooter from "./components/TheFooter.vue"
 import Button from "./components/Button.vue"
 import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
@@ -19,14 +19,18 @@ export default{
     Button,
     Card,
     LightCard,
-    MediumCard
+    MediumCard,
+    TheFooter
 },
+
   data(){
 
   },
+
   methods:{
     
   }
+  
 }
 </script>
 
@@ -49,6 +53,8 @@ export default{
       <MediumCard></MediumCard>
     </div>
   </div>
+
+  <TheFooter></TheFooter>
 </template>
 
 <style lang="scss">
