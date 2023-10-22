@@ -27,24 +27,29 @@ export default{
 
 
 <template>
-  <router-view></router-view>
+  <div class="main-container">
+    <router-view></router-view>
 
-  <h1>CAZZO</h1>
-  <Button classe="bg-danger" text="oooo"></Button>
+    <h1>CAZZO</h1>
+    <Button classe="bg-danger" text="oooo"></Button>
 
-  <div class="placeholder-padding">             <!-- placeholder-->
-    <Card></Card>
+    <div class="placeholder-padding">             <!-- placeholder-->
+      <Card></Card>
+    </div>
+
+    <div class="placeholder-padding">             <!-- placeholder -->
+      <LighterCard></LighterCard>
+    </div>
   </div>
-
-  <div class="placeholder-padding">             <!-- placeholder -->
-    <LighterCard></LighterCard>
-  </div>
-
 </template>
 
 <style lang="scss">
   @use "../scss/partials/mixins" as *;
   @use "../scss/partials/variables" as *;
+
+  .main-container {
+    background-color: $color-section-light;
+  }
 
   .placeholder-padding {                  //placeholder
     padding: 5rem;
