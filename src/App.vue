@@ -3,23 +3,24 @@ import Home from "./pages/Home.vue"
 import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 
-import TheNavbar from "./components/TheNavbar.vue"
+import TheHeader from "./components/TheHeader.vue"
 
 import Button from "./components/Button.vue"
 import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
 import MediumCard from "./components/MediumCard.vue"
 
-export default{
+export default {
   components:{
     Home,
     Contacts,
     AboutUs,
-    TheNavbar,
+    TheHeader,
     Button,
     Card,
     LightCard,
     MediumCard,
+    TheHeader
 },
   data(){
 
@@ -36,7 +37,7 @@ export default{
   <div class="main-container">
     <router-view></router-view>
 
-    <TheNavbar></TheNavbar>
+    <TheHeader></TheHeader>
 
     <div class="placeholder-padding">             <!-- placeholder-->
       <Card></Card>
