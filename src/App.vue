@@ -10,7 +10,6 @@ import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
 import MediumCard from "./components/MediumCard.vue"
 import Jumbotron from "./components/Jumbotron.vue"
-import Button from "./components/Button.vue"
 
 export default {
   components: {
@@ -24,9 +23,6 @@ export default {
     MediumCard,
     Jumbotron,
   },
-  data() {
-    Button,
-},
   data(){
 
   },
