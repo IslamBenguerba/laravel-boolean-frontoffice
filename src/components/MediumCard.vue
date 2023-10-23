@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="card-container">
+  <div class="card-container">                <!--  @click="$emit('toggle-hidden')" non funziona -->
     <div class="img-container">
       <!-- img url chiamata axios. Cambiare poi le dimensioni ed il posizionamento nel CSS -->
     </div>
