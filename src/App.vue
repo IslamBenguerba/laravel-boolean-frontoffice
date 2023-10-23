@@ -10,6 +10,7 @@ import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
 import MediumCard from "./components/MediumCard.vue"
 import Button from "./components/Button.vue"
+import CocktailList from "./components/CocktailList.vue"
 
 export default {
   components: {
@@ -22,6 +23,7 @@ export default {
     LightCard,
     MediumCard,
     Button,
+    CocktailList
 },
   data(){
 
@@ -43,11 +45,8 @@ export default {
     <TheMain></TheMain>
 
     <div class="placeholder-padding">             <!-- placeholder. Da eliminare div e tutte le card-->
-      <Card></Card>
-      <LightCard></LightCard>
-      <MediumCard></MediumCard>
     </div>
-
+    <CocktailList></CocktailList>
   </div>
 </template>
 
