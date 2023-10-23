@@ -9,9 +9,10 @@ import Button from "./components/Button.vue"
 import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
 import MediumCard from "./components/MediumCard.vue"
+import Jumbotron from "./components/Jumbotron.vue"
 
-export default{
-  components:{
+export default {
+  components: {
     Home,
     Contacts,
     AboutUs,
@@ -19,13 +20,14 @@ export default{
     Button,
     Card,
     LightCard,
-    MediumCard
-},
-  data(){
+    MediumCard,
+    Jumbotron,
+  },
+  data() {
 
   },
-  methods:{
-    
+  methods: {
+
   }
 }
 </script>
@@ -42,8 +44,9 @@ export default{
     <div class="placeholder-small-padding"></div>
 
     <TheNavbar></TheNavbar>
+    <Jumbotron></Jumbotron>
 
-    <div class="placeholder-padding">             <!-- placeholder-->
+    <div class="placeholder-padding"> <!-- placeholder-->
       <Card></Card>
       <LightCard></LightCard>
       <MediumCard></MediumCard>
@@ -52,23 +55,24 @@ export default{
 </template>
 
 <style lang="scss">
-  @use "../scss/partials/mixins" as *;
-  @use "../scss/partials/variables" as *;
+@use "../scss/partials/mixins" as *;
+@use "../scss/partials/variables" as *;
 
-  .main-container {
-    background-color: $color-section-light;
-    padding: 0 3rem;
-  }
+.main-container {
+  background-color: $color-section-light;
+/*   padding: 0 3rem;
+ */}
 
-  .placeholder-padding {                  //placeholder
-    padding: 5rem 0;
-    display: flex;
-    gap: 5rem;
-  }
+.placeholder-padding {
+  //placeholder
+  padding: 5rem 0;
+  display: flex;
+  gap: 5rem;
+}
 
-  .placeholder-small-padding {
-    padding: 1rem 0;
-  }
+.placeholder-small-padding {
+  padding: 1rem 0;
+}
 </style>
 
 <!-- settare il logo e scegliere i dati da mettere nelle navbar -->
