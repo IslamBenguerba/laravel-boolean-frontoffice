@@ -104,9 +104,9 @@ export default {
     color: $color-text-light;
   }
 
-  .hidden {
-    display: none;
-  }
+  // .hidden {
+  //   display: none;
+  // }
 
   .cocktail-img-container {
     width: 20%;
@@ -120,7 +120,7 @@ export default {
   }
 
   .cocktail-info {                            //CONTAINER INFO
-    border: 1px solid $color-text-light;              //perchè non funziona?
+    border: 1px solid $color-text-light;
     text-transform: capitalize;
     font-weight: 600;
   }
