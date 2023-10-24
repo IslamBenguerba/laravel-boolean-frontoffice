@@ -60,8 +60,8 @@ export default {
 
 .main-container {
   background-color: $color-section-light;
-/*   padding: 0 3rem;
- */}
+   padding: 0 3rem;
+  }
 
   .placeholder-padding {                  //placeholder
     padding: 5rem 0;
