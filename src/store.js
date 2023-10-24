@@ -1,17 +1,5 @@
-// import axios from 'axios';
-import { reactive } from 'vue'
+import axios from "axios";
+import { reactive } from "vue";
+//_______________________________
 
-export const store = reactive({
-    // data: [],
-    // lista: '',
-    // page: [],
-    // currentPage: 1,
-    // queryOfPerson: 'Avenger',
-    // totalPage: '',
-    nomeCocktail:' ciao',
-    toggleList: false,
-    PrevLaunch (){
-        return store.toggleList
-    }
-})
-
+export const store = reactive({ slides: [] });

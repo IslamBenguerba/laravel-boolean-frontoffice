@@ -8,32 +8,31 @@ import AboutUs from "./pages/AboutUs.vue";
 
 // definiamo le rotte
 const routes = [
-    {
-        path: "/", // uri da scrivere nel browser
-        name: "home", // nome della rotta da usare per creare un link
-        component: Home // componente che ritorna l'html della pagina
-    },
+  {
+    path: "/", // uri da scrivere nel browser
+    name: "home", // nome della rotta da usare per creare un link
+    component: Home, // componente che ritorna l'html della pagina
+  },
 
-    {
-        path: "/contacts", // uri da scrivere nel browser
-        name: "contacts", // nome della rotta da usare per creare un link
-        component: Contacts // componente che ritorna l'html della pagina
-    },
+  {
+    path: "/contacts", // uri da scrivere nel browser
+    name: "contacts", // nome della rotta da usare per creare un link
+    component: Contacts, // componente che ritorna l'html della pagina
+  },
 
-    {
-        path: "/about-us", // uri da scrivere nel browser
-        name: "about-us", // nome della rotta da usare per creare un link
-        component: AboutUs // componente che ritorna l'html della pagina
-    },
-
-]
+  {
+    path: "/about-us", // uri da scrivere nel browser
+    name: "about-us", // nome della rotta da usare per creare un link
+    component: AboutUs, // componente che ritorna l'html della pagina
+  },
+];
 
 // creazione istanza di Router
 const router = createRouter({
-    // Serve ad indicare come gestire l'url al cambio pagina
-    history: createWebHistory(),
-    // passiamo l'array delle rotte
-    routes
+  // Serve ad indicare come gestire l'url al cambio pagina
+  history: createWebHistory(),
+  // passiamo l'array delle rotte
+  routes,
 });
 
 // esportiamo l'istanza router per poterla usare dentro main.js
