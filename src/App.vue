@@ -4,14 +4,9 @@ import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 
 import TheHeader from "./components/TheHeader.vue"
-import TheMain from "./components/TheMain.vue"
+import TheFooter from "./components/TheFooter.vue"
 
-import Card from "./components/Card.vue"
-import LightCard from "./components/LightCard.vue"
-import MediumCard from "./components/MediumCard.vue"
-import Jumbotron from "./components/Jumbotron.vue"
 import Button from "./components/Button.vue"
-
 
 export default {
   components: {
@@ -19,36 +14,21 @@ export default {
     Contacts,
     AboutUs,
     TheHeader,
-    TheMain,
-    Card,
-    LightCard,
-    MediumCard,
-    Jumbotron,
     Button,
+    TheFooter
   },
-
-
-  data() {
-
-  },
-  methods: {
-
-  }
 }
 </script>
 
-
-
 <template>
   <div class="main-container">
-
     <TheHeader></TheHeader>
+    <div class="big-space-divisor"></div>
 
-    <!-- <TheMain></TheMain> -->
-
-    <TheNavbar></TheNavbar>
-    <!-- <Jumbotron></Jumbotron> -->
     <router-view></router-view>
+    <div class="big-space-divisor"></div>
+
+    <TheFooter></TheFooter>    
   </div>
 </template>
 
@@ -61,11 +41,12 @@ export default {
   padding: 0 3rem;
 }
 
-.placeholder-padding {
-  //placeholder
-  padding: 5rem 0;
-  display: flex;
-  gap: 5rem;
+.big-space-divisor {
+  padding-bottom: 3rem;
+}
+
+.space-divisor {
+  padding-bottom: 1rem;
 }
 </style>
 
@@ -73,7 +54,7 @@ export default {
   TO DO LIST:
 
   IMPORTANTE:
-  -aggiungere la rotta delle pagine al tag <a> nella <NavbarLinks>
+  -TheFooter
 
   MEDIA IMPORTANZA:  
   -<interaction-container> deve sparire e non sovrapporsi a media queries più basse

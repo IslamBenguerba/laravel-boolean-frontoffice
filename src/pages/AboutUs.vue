@@ -1,11 +1,7 @@
 <script>
+  export default{
 
-
-export default{
-
-
-}
-
+  }
 </script>
 
 
@@ -28,8 +24,6 @@ export default{
     </div>
 
 </template>
-
-
 
 <style lang="scss" scoped>
     .benghi-edition{

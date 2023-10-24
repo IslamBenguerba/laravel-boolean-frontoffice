@@ -1,26 +1,17 @@
 <script>
-import CocktailList from '../components/CocktailList.vue';
-import TheMain from '../components/TheMain.vue';
-export default {
-components :{
-    CocktailList,
-    TheMain
-}
+  import TheMain from '../components/TheMain.vue';
 
-}
-
+  export default {
+    components :{
+        TheMain,
+    }
+  }
 </script>
 
-
-
 <template>
-    <TheMain></TheMain>
-
-    <div class="placeholder-padding"> <!-- placeholder. Da eliminare div e tutte le card-->
-    </div>
-    <CocktailList></CocktailList>
+  <TheMain></TheMain>
 </template>
 
+<style lang="scss" scoped>
 
-
-<style lang="scss" scoped></style>
+</style>

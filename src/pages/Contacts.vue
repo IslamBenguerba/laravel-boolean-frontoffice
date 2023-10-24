@@ -1,20 +1,12 @@
 <script>
-
-
-export default{
-
-
-}
-
+  export default{
+  
+  }
 </script>
-
-
 
 <template>
 
 </template>
-
-
 
 <style lang="scss" scoped>
 
