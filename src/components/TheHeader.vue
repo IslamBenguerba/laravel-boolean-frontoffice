@@ -1,9 +1,10 @@
 <script>
 import TheNavbar from "./TheNavbar.vue"
-
+import Jumbotron from "./Jumbotron.vue";
 export default {
   components:{
     TheNavbar,
+    Jumbotron
   },
 }
 </script>
@@ -12,6 +13,7 @@ export default {
 
 <template>
     <TheNavbar></TheNavbar>
+    <Jumbotron></Jumbotron>
 </template>
 
 <style lang="scss">
