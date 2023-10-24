@@ -10,6 +10,8 @@ import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
 import MediumCard from "./components/MediumCard.vue"
 import Jumbotron from "./components/Jumbotron.vue"
+import Button from "./components/Button.vue"
+
 
 export default {
   components: {
@@ -22,8 +24,11 @@ export default {
     LightCard,
     MediumCard,
     Jumbotron,
+    Button,
   },
-  data(){
+
+
+  data() {
 
   },
   methods: {
@@ -36,21 +41,14 @@ export default {
 
 <template>
   <div class="main-container">
-    <router-view></router-view>
 
     <TheHeader></TheHeader>
 
-    <TheMain></TheMain>
+    <!-- <TheMain></TheMain> -->
 
     <TheNavbar></TheNavbar>
-    <Jumbotron></Jumbotron>
-
-    <div class="placeholder-padding"> <!-- placeholder-->
-      <Card></Card>
-      <LightCard></LightCard>
-      <MediumCard></MediumCard>
-    </div>
-
+    <!-- <Jumbotron></Jumbotron> -->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -60,14 +58,15 @@ export default {
 
 .main-container {
   background-color: $color-section-light;
-/*   padding: 0 3rem;
- */}
+  padding: 0 3rem;
+}
 
-  .placeholder-padding {                  //placeholder
-    padding: 5rem 0;
-    display: flex;
-    gap: 5rem;
-  }
+.placeholder-padding {
+  //placeholder
+  padding: 5rem 0;
+  display: flex;
+  gap: 5rem;
+}
 </style>
 
 <!--

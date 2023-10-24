@@ -11,6 +11,9 @@ export default{
 
 
 <template>
+    <div class="container-fluid">
+        <h1>coooooooo</h1>
+    </div>
 
 </template>
 

@@ -9,8 +9,8 @@
       return {
         links: [
           {link: "home"},
-          {link: "chi siamo"},
-          {link: "contatti"},
+          {link: "contacts"},
+          {link: "about-us"},
         ]
       }
     }
@@ -24,7 +24,8 @@
         <ul>
           <li v-for="item in links">
             <a href="">
-              {{ item.link }}
+              <!-- {{ item.link }} -->
+              <router-link :to="{name: item.link}">{{ item.link }}</router-link>
               <i class="fa-solid fa-angle-down"></i>
             </a>
           </li>
