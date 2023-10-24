@@ -10,6 +10,7 @@ import Card from "./components/Card.vue"
 import LightCard from "./components/LightCard.vue"
 import MediumCard from "./components/MediumCard.vue"
 import Jumbotron from "./components/Jumbotron.vue"
+import TheFooter from "./components/TheFooter.vue"
 
 export default {
   components: {
@@ -22,6 +23,8 @@ export default {
     LightCard,
     MediumCard,
     Jumbotron,
+    TheFooter
+
   },
   data(){
 
@@ -52,6 +55,9 @@ export default {
     </div>
 
   </div>
+
+    <TheFooter></TheFooter>
+
 </template>
 
 <style lang="scss">
