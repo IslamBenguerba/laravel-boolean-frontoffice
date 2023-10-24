@@ -23,7 +23,7 @@ export default {
     LightCard,
     MediumCard,
     Button,
-    CocktailList
+    // CocktailList
 },
   data(){
 
@@ -38,16 +38,12 @@ export default {
 
 <template>
   <div class="main-container">
-    <router-view></router-view>
-
+    
     <TheHeader></TheHeader>
-
-    <TheMain></TheMain>
-
-    <div class="placeholder-padding">             <!-- placeholder. Da eliminare div e tutte le card-->
-    </div>
-    <CocktailList></CocktailList>
+    <router-view></router-view>
   </div>
+
+
 </template>
 
 <style lang="scss">

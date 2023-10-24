@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // importazione componenti singole pagine
 import Home from "./pages/Home.vue";
 import Contacts from "./pages/Contacts.vue";
-import AboutUs from "./pages/Contacts.vue";
+import AboutUs from "./pages/AboutUs.vue";
 // ... import di altri componenti
 
 // definiamo le rotte
