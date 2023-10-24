@@ -79,6 +79,8 @@ export default {
 
                     </div>
 
+                    <div class="text-center text-light mt-5">Copyright © 2023 New Cocktails SRL. Tutti i diritti riservati</div>
+
                 </div>
 
                 <!-- Right Column  -->
