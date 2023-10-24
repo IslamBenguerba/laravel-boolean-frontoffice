@@ -10,6 +10,7 @@ export const store = reactive({
     // totalPage: '',
     nomeCocktail:' ciao',
     toggleList: false,
+    drinkView:null,
     PrevLaunch (){
         return store.toggleList
     }
