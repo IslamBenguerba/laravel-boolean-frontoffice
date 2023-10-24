@@ -3,88 +3,48 @@
   export default {
     data() {
       return {
-        details: [                      //placeholder in attesa della chiamata Axios
-          {name: "name"},
-          {mainInfos: [
-            {alcoholic: "alcoholic"},
-            {category: "category"},
-            {iba: "iba"},
-            {glass: "glass"},
-          ]},
-          {ingredients: [
-            {ingredient: "ingredient"},
-            {measure: "measure"},
-          ]},
-          {instruction: "instruction"},
-        ],
+
       };
     },
   };
 </script>
 
 <template>
-  <div class="cocktail-preview-main-container" >       <!-- :class="{'hidden': isActive}" @toggle-hidden="toggleHidden" -->
-    <div class="cocktail-img-container">
+  <div class="fluid-container">
+    <div class="cocktail-preview-main-container classy-style" >
+      <div class="cocktail-img-container classy-style">
 
-    </div>
+      </div>
 
-    <div class="cocktail-data-container">       <!-- aggiungere la classe "cocktail-info" e fixare i bordi ai div giusti -->
-      <div v-for="item in details">
-        <div>
-          {{ item.name }}
+      <div class="cocktail-data-container classy-style">
+        <div class="row-container">
+          <div class="classy-style name-label">strDrink</div>            <!-- NOME -->
         </div>
 
-        <div v-for="subitem in item.mainInfos">
-          <div v-for="value in subitem">
-            {{ value }}
-          </div>
+        <div class="row-container">                        <!-- CATEGORIE -->
+          <div class="classy-style info-label">strAlcoholic</div>
+          <div class="classy-style info-label">strCategory</div>
+          <div class="classy-style info-label">strIBA</div>
+          <div class="classy-style info-label">strGlass</div>
         </div>
 
-        <div v-for="subitem in item.ingredients">
-          <div v-for="value in subitem">
-            {{ value }}
-          </div>
+        <div class="row-container">                        <!-- INGREDIENTI -->
+          <div class="classy-style info-label">strIngredient1</div>
+          <!--ciclo for per richiamare gli ingredienti non null-->
         </div>
-
+        <div class="row-container">
+          <div class="classy-style info-label">strMeasure1</div>
+          <!--ciclo for per richiamare le measures non null-->
+        </div>
+        
+        <div class="row-container instruction-container">                   <!-- ISTRUZIONI -->
+          <div class="just-bordered instruction-label">strInstruction</div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="space-divisor"></div>
-
-  <!-- <MediumCard @click="toggleHidden"></MediumCard>       questo funziona. Quello dentro al componente no-->
-<!-- import MediumCard from './MediumCard.vue';
-import { store } from '../store';
-export default {
-  components: {
-    MediumCard,
-  },
-  data() {
-    return {
-      nome: store.nomeCocktail
-    };
-  },
-  methods: {
-    toggleHidden() {
-      //con questa funzione possiamo usare la variabile nello store comandada da ogni singola card 
-      store.toggleList
-      console.log(store.toggleList)
-      return store.toggleList
-    },
-    closePreviw() {
-      store.toggleList = false
-    }
-  }
-} -->
-<!-- </script> -->
-
-<!-- <template>
-  <div class="cocktail-preview-main-container" v-if="toggleHidden()">
-    <button @click="closePreviw()">chiudi</button>
-    {{ nome }}
-  </div>
-
-  <MediumCard @click="toggleHidden"></MediumCard>       questo funziona. Quello dentro al componente no -->
+  <div class="big-space-divisor"></div>
 </template>
 
 <style scoped lang="scss">
@@ -94,19 +54,37 @@ export default {
   .space-divisor {
     padding-bottom: 1rem;
   }
+
+  .classy-style {                                       //GENERAL STYLE
+    border: 1px solid $color-text-light;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  .just-bordered {
+    border: 1px solid $color-text-light;
+    font-weight: 500;
+  }
+
+  .fluid-container {                                    //MAIN CONTAINERS
+    @include flex-center-center;
+  }
+
+  .row-container {
+    display: flex;
+    gap: 7px;
+  }
+
   .cocktail-preview-main-container {
-    border: 1px solid $color-text-light;                    //temporaneo per lo sviluppo
+    width: 1500px;
     height: 350px;
     padding: 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: $color-text-light;
+    @include flex-between-center;
   }
-
-  // .hidden {
-  //   display: none;
-  // }
 
   .cocktail-img-container {
     width: 20%;
@@ -114,14 +92,28 @@ export default {
   }
 
   .cocktail-data-container {
-    width: 75%;
+    width: 78%;
     height: 100%;
-    @include flex-col-center-center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
-  .cocktail-info {                            //CONTAINER INFO
-    border: 1px solid $color-text-light;
-    text-transform: capitalize;
-    font-weight: 600;
+  .instruction-container {
+    width: 100%;
+  }
+
+  .name-label,
+  .info-label {                                     //SINGLE LABEL
+    width: 150px;
+    text-align: center;
+  }
+
+  .instruction-label {
+    height: 100px;
+    width: 100%;
+    padding: 2px 10px;
   }
 </style>
