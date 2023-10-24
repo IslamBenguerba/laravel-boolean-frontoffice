@@ -57,7 +57,7 @@ export default {
   TO DO LIST:
 
   IMPORTANTE:
-  -aggiungere la rotta delle pagine al tag <a> nella <NavbarLinks>
+  -TheFooter
 
   MEDIA IMPORTANZA:  
   -<interaction-container> deve sparire e non sovrapporsi a media queries più basse
