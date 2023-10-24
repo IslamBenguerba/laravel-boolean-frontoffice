@@ -2,7 +2,7 @@
 import { store } from '../store';
 export default {
   props: {
-    titolo: 'ciao'
+    cokctail: {}
   },
   data() {
     return {
@@ -24,21 +24,22 @@ export default {
 <template>
   <div class="card-container" @click="toggleDescription()"> <!--  @click="$emit('toggle-hidden')" non funziona -->
     <div class="img-container">
+      <img :src="cokctail['strDrinkThumb']" alt="">
       <!-- img url chiamata axios. Cambiare poi le dimensioni ed il posizionamento nel CSS -->
     </div>
     <div class="description-container">
       <div class="relatived">
         <div class="cocktail-name-container absoluted">
           <!-- strDrink -->
-          Margarita
+          {{ cokctail['strDrink'] }}
         </div>
         <div class="cocktail-alcoholic-container absoluted">
           <!-- strAlcoholic -->
-          Alcoholic
+          {{ cokctail['strAlcoholic'] }}
         </div>
         <div class="cocktail-category-container absoluted">
           <!-- strCategory -->
-          Ordinary Drink
+          {{ cokctail['strCategory'] }}
         </div>
       </div>
     </div>
@@ -57,10 +58,13 @@ export default {
 }
 
 .img-container {
-  height: 250px;
-  background-image: url('../assets/placeholder\ img.jpg');
-  background-size: cover;
-  background-position: center;
+  img {
+    height: 250px;
+    background-image: url('../assets/placeholder\ img.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
 }
 
 .description-container {
