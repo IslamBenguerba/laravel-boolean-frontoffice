@@ -1,49 +1,54 @@
 <script>
-import { store } from '../store';
+import { store, getCocktailfromApi } from '../store'
+
 export default {
-  props: {
-    cokctail: {}
-  },
+
   data() {
     return {
+      store
     }
   },
-  methods: {
-    toggleDescription() {
-      // store.toggleList = true
-      //variabile di controllo del CocktailPreview che si trova nello store
-      store.toggleList = !store.toggleList;
-      store.nomeCocktail = 'come va?'
-      return store.toggleList
-    }
 
+
+  mounted() {
+    getCocktailfromApi()
   }
 }
+
+
 </script>
 
 <template>
-  <div class="card-container" @click="toggleDescription()"> <!--  @click="$emit('toggle-hidden')" non funziona -->
-    <div class="img-container">
-      <img :src="cokctail['strDrinkThumb']" alt="">
-      <!-- img url chiamata axios. Cambiare poi le dimensioni ed il posizionamento nel CSS -->
-    </div>
-    <div class="description-container">
-      <div class="relatived">
-        <div class="cocktail-name-container absoluted">
-          <!-- strDrink -->
-          {{ cokctail['strDrink'] }}
-        </div>
-        <div class="cocktail-alcoholic-container absoluted">
-          <!-- strAlcoholic -->
-          {{ cokctail['strAlcoholic'] }}
-        </div>
-        <div class="cocktail-category-container absoluted">
-          <!-- strCategory -->
-          {{ cokctail['strCategory'] }}
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <div class="row row-cols-4 gy-5">
+      <div class="col" v-for="(singleCocktail) in store.cocktails">
+        <div class="card-container">
+          <div class="img-container">
+            <img :src="singleCocktail?.strDrinkThumb" alt="">
+            <!-- img url chiamata axios. Cambiare poi le dimensioni ed il posizionamento nel CSS -->
+          </div>
+          <div class="description-container">
+            <div class="relatived">
+              <div class="cocktail-name-container absoluted">
+                <!-- strDrink -->
+                {{ singleCocktail?.strDrink }}
 
+              </div>
+              <div class="cocktail-alcoholic-container absoluted">
+                <!-- strAlcoholic -->
+                {{ singleCocktail?.strAlcoholic }}
+              </div>
+              <div class="cocktail-category-container absoluted">
+                <!-- strCategory -->
+                {{ singleCocktail?.strCategory }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -58,13 +63,12 @@ export default {
 }
 
 .img-container {
-  img {
-    height: 250px;
-    background-image: url('../assets/placeholder\ img.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+    img{
+      width: 100%;
+    }
 }
 
 .description-container {
@@ -105,3 +109,15 @@ export default {
   font-size: 14px;
 }
 </style>
+
+
+
+
+<!-- /* methods: {
+    toggleDescription() {
+      // store.toggleList = true
+      //variabile di controllo del CocktailPreview che si trova nello store
+      store.toggleList = !store.toggleList;
+      store.nomeCocktail = 'come va?'
+      return store.toggleList
+    } */ -->
