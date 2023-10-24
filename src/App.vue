@@ -64,3 +64,21 @@ export default {
   -non scordarsi di scegliere un logo più bello all'interno della <NavbarInfo>
 
 -->
+
+<!--
+import { reactive } from 'vue'
+
+export const store = reactive({
+    // data: [],
+    // lista: '',
+    // page: [],
+    // currentPage: 1,
+    // queryOfPerson: 'Avenger',
+    // totalPage: '',
+    nomeCocktail:' ciao',
+    toggleList: false,
+    PrevLaunch (){
+        return store.toggleList
+    }
+})
+-->
