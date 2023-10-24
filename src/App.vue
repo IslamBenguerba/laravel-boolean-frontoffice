@@ -30,8 +30,6 @@ export default {
 
     <TheFooter></TheFooter>    
   </div>
-
-
 </template>
 
 <style lang="scss">
