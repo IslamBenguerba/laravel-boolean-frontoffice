@@ -12,6 +12,13 @@ export default {
 
         <div class="container">
 
+            <div class="row row-cols-3">
+
+                <div class="col">
+
+                </div>
+                
+            </div>
 
         </div>
 
@@ -24,7 +31,8 @@ export default {
 .footer-section {
 
     height: 400px;
-    background-color: black;
+    width: 100%;
+    background-color: #0e1317;
 
 }
 </style>

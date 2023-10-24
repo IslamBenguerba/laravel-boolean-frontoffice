@@ -28,8 +28,8 @@ export default {
     <router-view></router-view>
     <div class="big-space-divisor"></div>
 
-    <TheFooter></TheFooter>    
   </div>
+  <TheFooter></TheFooter>    
 </template>
 
 <style lang="scss">
