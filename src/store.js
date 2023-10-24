@@ -13,10 +13,5 @@ export const store = reactive({
     PrevLaunch (){
         return store.toggleList
     }
-
-
-
-    
-
 })
 

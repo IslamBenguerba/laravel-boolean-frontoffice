@@ -3,14 +3,14 @@ import axios from 'axios';
 import MediumCard from './MediumCard.vue';
 export default {
     components: {
-        MediumCard,
+        MediumCard
     },
     data() {
         return {
             listacoctail: [],
             valore: "",
             testo: "",
-            validateArray : false
+            validateArray : false,
         }
     },
     methods: {
@@ -54,6 +54,10 @@ export default {
                     
                     // console.log(response)
                 })
+        },
+        toggleDescription(){
+            store.toggleList = true
+            console.log(store.toggleList)
         }
     },
     mounted() {
@@ -74,7 +78,7 @@ export default {
         <div class="cocktail-list gap-3">
             <!-- ciclo per creare le card e passiamo i valori con props -->
             <div class="danger" v-if="this.validateArray === true"> Non ci sono elementi</div>
-            <MediumCard :cokctail=cocktai v-for="cocktai in filterlist()" ></MediumCard>
+            <MediumCard :cokctail=cocktai v-for="cocktai in filterlist()" @click="toggleDescription()" ></MediumCard>
         </div>
     </div>
 </template>

@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <div class="cocktail-preview-main-container">       <!-- :class="{'hidden': isActive}" @toggle-hidden="toggleHidden" -->
+  <div class="cocktail-preview-main-container" >       <!-- :class="{'hidden': isActive}" @toggle-hidden="toggleHidden" -->
     <div class="cocktail-img-container">
 
     </div>
