@@ -13,16 +13,6 @@
 </template>
 
 <style lang="scss" scoped>
-
-@use "../scss/partials/mixins" as *;
-@use "../scss/partials/variables" as *;
-
-
-.placeholder-padding {
-    //placeholder
-    padding: 5rem 0;
-    display: flex;
-    gap: 5rem;
-}
-
+  @use "../scss/partials/mixins" as *;
+  @use "../scss/partials/variables" as *;
 </style>
