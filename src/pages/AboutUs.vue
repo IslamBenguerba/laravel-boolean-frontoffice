@@ -4,8 +4,6 @@
   }
 </script>
 
-
-
 <template>
   <div class="container-fluid">
     <h1>ABOUT US TEST</h1>
