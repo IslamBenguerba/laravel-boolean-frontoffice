@@ -12,6 +12,7 @@ import MediumCard from "./components/MediumCard.vue"
 import Jumbotron from "./components/Jumbotron.vue"
 import Button from "./components/Button.vue"
 
+import TheFooter from "./components/TheFooter.vue"
 
 export default {
   components: {
@@ -25,6 +26,8 @@ export default {
     MediumCard,
     Jumbotron,
     Button,
+    TheFooter
+
   },
 
 
@@ -50,6 +53,9 @@ export default {
     <!-- <Jumbotron></Jumbotron> -->
     <router-view></router-view>
   </div>
+
+    <TheFooter></TheFooter>
+
 </template>
 
 <style lang="scss">
