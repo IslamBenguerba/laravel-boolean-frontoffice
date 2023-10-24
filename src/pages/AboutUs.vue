@@ -1,23 +1,16 @@
 <script>
+  export default{
 
-
-export default{
-
-
-}
-
+  }
 </script>
 
 
 
 <template>
-    <div class="container-fluid">
-        <h1>coooooooo</h1>
-    </div>
-
+  <div class="container-fluid">
+    <h1>ABOUT US TEST</h1>
+  </div>
 </template>
-
-
 
 <style lang="scss" scoped>
 

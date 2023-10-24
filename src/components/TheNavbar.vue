@@ -20,7 +20,5 @@
   @use "../../scss/partials/mixins" as *;
   @use "../../scss/partials/variables" as *;
 
-  .space-divisor {
-    padding-bottom: 1rem;
-  }
+  
 </style>
