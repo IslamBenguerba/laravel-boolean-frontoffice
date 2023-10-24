@@ -1,12 +1,12 @@
 <script>
-import Home from "./pages/Home.vue"
-import Contacts from "./pages/Contacts.vue"
-import AboutUs from "./pages/AboutUs.vue"
+import Home from "./pages/Home.vue";
+import Contacts from "./pages/Contacts.vue";
+import AboutUs from "./pages/AboutUs.vue";
 
-import TheHeader from "./components/TheHeader.vue"
-import TheFooter from "./components/TheFooter.vue"
+import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
 
-import Button from "./components/Button.vue"
+import Button from "./components/Button.vue";
 
 export default {
   components: {
@@ -15,9 +15,9 @@ export default {
     AboutUs,
     TheHeader,
     Button,
-    TheFooter
+    TheFooter,
   },
-}
+};
 </script>
 
 <template>
@@ -28,7 +28,7 @@ export default {
     <router-view></router-view>
     <div class="big-space-divisor"></div>
 
-    <TheFooter></TheFooter>    
+    <TheFooter></TheFooter>
   </div>
 </template>
 
