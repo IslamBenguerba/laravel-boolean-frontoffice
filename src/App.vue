@@ -4,7 +4,6 @@ import Contacts from "./pages/Contacts.vue"
 import AboutUs from "./pages/AboutUs.vue"
 
 import TheHeader from "./components/TheHeader.vue"
-import TheMain from "./components/TheMain.vue"
 import TheFooter from "./components/TheFooter.vue"
 
 import Button from "./components/Button.vue"
