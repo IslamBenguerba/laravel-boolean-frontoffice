@@ -1,21 +1,15 @@
 <script>
+import TheMain from '../components/TheMain.vue';
 
-
-export default{
-
-
+export default {
+    components: {
+        TheMain,
+    }
 }
-
 </script>
 
-
-
 <template>
-
+    <TheMain></TheMain>
 </template>
 
-
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
