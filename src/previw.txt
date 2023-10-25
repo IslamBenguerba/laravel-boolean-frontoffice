@@ -21,7 +21,7 @@ export default {
         },
         { instruction: "instruction" },
       ],
-      drink: null,
+      drink:null,
       store
     };
   },
@@ -34,21 +34,11 @@ export default {
       <!-- <img :src="store.strDrinkThumb" alt="" v-if="drink !== null"> -->
     </div>
 
-    <div class="cocktail-data-container" v-if="store.drinkView !== null">
-      <!-- aggiungere la classe "cocktail-info" e fixare i bordi ai div giusti -->
+    <div class="cocktail-data-container" v-if="store.drinkView !== null"> <!-- aggiungere la classe "cocktail-info" e fixare i bordi ai div giusti -->
       <div>
         {{ store.drinkView['strDrink'] }}
         <div>
-          <h3>Gli ingredienti</h3>
-          <ul>
-            <li v-for="ingredient in store.drinkView['ingredienti']">{{ ingredient }}</li>
-          </ul>
-          <h3>I dosaggi</h3>
-          <ul>
-            <li v-for="dose in store.drinkView['misure']">{{ dose }}</li>
-          </ul>
-          <h3>Istruzioni</h3>
-          {{ store.drinkView['strInstructionsIT'] }}
+
         </div>
 
         <!-- <div v-for="subitem in item.mainInfos">
@@ -142,5 +132,4 @@ export default {
   border: 1px solid $color-text-light;
   text-transform: capitalize;
   font-weight: 600;
-}
-</style>
+}</style>

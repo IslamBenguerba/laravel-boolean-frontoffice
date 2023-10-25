@@ -1,7 +1,7 @@
 <script>
 import axios from 'axios';
-import { store } from '../store';
 import MediumCard from './MediumCard.vue';
+import { store } from '../store';
 export default {
     components: {
         MediumCard
@@ -54,32 +54,25 @@ export default {
                 })
         },
         toggleDescription(cocktail) {
-            //cazzo siiii
-            const drink = cocktail
             store.toggleList = true
             let ingredienti = []
-            let misure = []
-            console.log(drink)
-            if (drink['ingredienti'] === undefined) {
-                for (let i = 1; i < 15; i++) {
-                    if (drink['strIngredient' + i] !== null) {
-                        ingredienti.push(drink['strIngredient' + i])
-                    }
-                    if (drink['strMeasure' + i] !== null) {
-                        misure.push(drink['strMeasure' + i])
-                    }
-                    delete drink['strIngredient' + i];
-                    delete drink['strMeasure' + i];
+            let misure =[]
+            console.log(cocktail)
+            for (let i = 1; i < 15; i++) {
+                if (cocktail['strIngredient' + i] !== null) {
+                    ingredienti.push(cocktail['strIngredient' + i])
                 }
-                drink['ingredienti'] = ingredienti
-                drink['misure'] = misure
-                store.drinkView = drink
-                console.log(ingredienti)
-                console.log(drink)
-            }else{
-                store.drinkView = drink
+                if (cocktail['strMeasure' + i] !== null) {
+                    misure.push(cocktail['strMeasure' + i])
+                }
+                delete cocktail['strIngredient'+ i];
+                delete cocktail['strMeasure'+ i];
             }
-
+            cocktail['ingredienti'] = ingredienti
+            cocktail['misure'] = misure
+            store.drinkView = cocktail
+            console.log(ingredienti)
+            console.log(cocktail)
             // console.log(store.drinkView)
         }
     },
@@ -124,7 +117,6 @@ export default {
     display: flex;
     gap: 1rem;
     background-color: $color-section-light;
-    justify-content: center;
     border: 0;
 }
 
@@ -136,7 +128,6 @@ export default {
 .cocktail-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .riccardo {

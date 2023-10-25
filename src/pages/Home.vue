@@ -13,7 +13,3 @@ export default {
 </template>
 
 <style lang="scss" scoped></style>
-<style lang="scss" scoped>
-  @use "../scss/partials/mixins" as *;
-  @use "../scss/partials/variables" as *;
-</style>
