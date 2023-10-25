@@ -1,11 +1,13 @@
 <script>
-import { store } from '../store';
+import { store } from '../store'
+
 export default {
   props: {
     drink: {}
   },
   data() {
     return {
+      store
     }
   },
   methods: {
@@ -18,7 +20,14 @@ export default {
     }
 
   }
+
+
+  // mounted() {
+  //   getCocktailfromApi()
+  // }
 }
+
+
 </script>
 
 <template>
@@ -45,6 +54,20 @@ export default {
     </div>
 
   </div>
+  <div class="cocktail-alcoholic-container absoluted">
+    <!-- strAlcoholic -->
+    {{ drink.strAlcoholic }}
+  </div>
+  <div class="cocktail-category-container absoluted">
+    <!-- strCategory -->
+    {{ drink.strCategory }}
+  </div>
+  <!-- </div>
+  </div>
+  </div>
+  </div> -->
+
+<!-- </div></div></div> -->
 </template>
 
 <style scoped lang="scss">
@@ -58,13 +81,13 @@ export default {
 }
 
 .img-container {
-  img {
-    height: 250px;
-    background-image: url('../assets/placeholder\ img.jpg');
-    background-size: cover;
-    background-position: center;
-  }
+  height: 250px;
+  background-size: cover;
+  background-position: center;
 
+  img {
+    width: 100%;
+  }
 }
 
 .description-container {
@@ -105,3 +128,15 @@ export default {
   font-size: 14px;
 }
 </style>
+
+
+
+
+<!-- /* methods: {
+    toggleDescription() {
+      // store.toggleList = true
+      //variabile di controllo del CocktailPreview che si trova nello store
+      store.toggleList = !store.toggleList;
+      store.nomeCocktail = 'come va?'
+      return store.toggleList
+    } */ -->

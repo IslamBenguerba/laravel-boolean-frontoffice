@@ -8,8 +8,6 @@ export default {
 }
 </script>
 
-
-
 <template>
     <div class="container-fluid">
         <div class="container benghi-edition">
