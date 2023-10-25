@@ -67,15 +67,16 @@ export default {
 </script>
 <template>
     <div class="container">
-        <input class="form-control riccardo" type="text" name="" id="" placeholder="inserisci una parola chiave"
+        <input class="form-control riccardo mb-1" type="text" name="" id="" placeholder="inserisci una parola chiave"
             v-model="testo">
-        <select class="form-select" aria-label="Default select example"   v-model="valore">
+        <select class="form-select mb-3" aria-label="Default select example"   v-model="valore">
             <option selected value="">Dammi tutto!</option>
             <option value="1">Categoria</option>
             <option value="2">Tipologia di bigghiere</option>
             <option value="3">Per Nome</option>
         </select>
-        <div class="cocktail-list gap-3">
+
+        <div class="cocktail-list gap-4">
             <!-- ciclo per creare le card e passiamo i valori con props -->
             <div class="danger" v-if="this.validateArray === true"> Non ci sono elementi</div>
             <MediumCard :cokctail=cocktai v-for="cocktai in filterlist()" @click="toggleDescription()" ></MediumCard>
