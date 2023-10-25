@@ -23,7 +23,7 @@
     <div class="logo-container">
       <div class="logo-box"></div>
       <div class="name-container">
-        Test
+
       </div>
     </div>
 
@@ -81,7 +81,7 @@
   .logo-box {
     height: 75px;
     aspect-ratio: 1/1;
-    background-image: url('../assets/placeholder-logo.svg');         //placeholer
+    background-image: url('../assets/placeholder-logo.svg')     //placeholer
   }
 
   .name-container {
