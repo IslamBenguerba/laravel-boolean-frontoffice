@@ -7,6 +7,7 @@ export default {
 </script>
 
 <template>
+    
     <div class="footer-section">
 
         <div class="container h-100">
