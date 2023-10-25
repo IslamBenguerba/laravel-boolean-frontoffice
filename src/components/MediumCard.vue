@@ -1,4 +1,5 @@
 <script>
+import { store } from '../store';
 export default {
   props: {
     drink: {}
@@ -21,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <div class="card-container">
+  <div class="card-container" @click="toggleDescription()"> <!--  @click="$emit('toggle-hidden')" non funziona -->
     <div class="img-container">
       <img :src="drink['strDrinkThumb']" alt="">
       <!-- img url chiamata axios. Cambiare poi le dimensioni ed il posizionamento nel CSS -->
@@ -42,6 +43,7 @@ export default {
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -58,10 +60,11 @@ export default {
 .img-container {
   img {
     height: 250px;
-    background-image: url("../assets/placeholder\ img.jpg");
+    background-image: url('../assets/placeholder\ img.jpg');
     background-size: cover;
     background-position: center;
   }
+
 }
 
 .description-container {
