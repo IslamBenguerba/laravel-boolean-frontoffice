@@ -1,44 +1,62 @@
 <script>
-
-  export default {
-    data() {
-      return {
-
-      };
-    },
-  };
+import { store } from '../store';
+export default {
+  data() {
+    return {
+      details: [                      //placeholder in attesa della chiamata Axios
+        { name: "name" },
+        {
+          mainInfos: [
+            { alcoholic: "alcoholic" },
+            { category: "category" },
+            { iba: "iba" },
+            { glass: "glass" },
+          ]
+        },
+        {
+          ingredients: [
+            { ingredient: "ingredient" },
+            { measure: "measure" },
+          ]
+        },
+        { instruction: "instruction" },
+      ],
+      // drink: null,
+      store
+    };
+  },
+};
 </script>
 
 <template>
   <div class="fluid-container">
-    <div class="cocktail-preview-main-container classy-style" >
+    <div class="cocktail-preview-main-container classy-style" v-if="store.drinkView !== null">
       <div class="cocktail-img-container classy-style">
-
+        <img class="fit-img" :src="store.drinkView.strDrinkThumb" alt="">
       </div>
 
       <div class="cocktail-data-container classy-style">
         <div class="row-container">
-          <div class="classy-style name-label">strDrink</div>            <!-- NOME -->
+          <div class="classy-style name-label">{{ store.drinkView['strDrink'] }}</div> <!-- NOME -->
         </div>
 
-        <div class="row-container">                        <!-- CATEGORIE -->
-          <div class="classy-style info-label">strAlcoholic</div>
-          <div class="classy-style info-label">strCategory</div>
-          <div class="classy-style info-label">strIBA</div>
-          <div class="classy-style info-label">strGlass</div>
+        <div class="row-container"> <!-- CATEGORIE -->
+          <div class="classy-style info-label">{{store.drinkView['strAlcoholic']}} </div>
+          <div class="classy-style info-label">{{ store.drinkView['strGlass'] }}</div>
+          <div class="classy-style info-label">{{ store.drinkView['strIBA'] }}</div>
         </div>
 
-        <div class="row-container">                        <!-- INGREDIENTI -->
-          <div class="classy-style info-label">strIngredient1</div>
+        <div class="row-container"> <!-- INGREDIENTI -->
+          <div class="classy-style info-label" v-for="ingredient in store.drinkView['ingredienti']">{{ ingredient }}</div>
           <!--ciclo for per richiamare gli ingredienti non null-->
         </div>
         <div class="row-container">
-          <div class="classy-style info-label">strMeasure1</div>
+          <div class="classy-style info-label" v-for="dose in store.drinkView['misure']">{{ dose }}</div>
           <!--ciclo for per richiamare le measures non null-->
         </div>
-        
-        <div class="row-container instruction-container">                   <!-- ISTRUZIONI -->
-          <div class="just-bordered instruction-label">strInstruction</div>
+
+        <div class="row-container instruction-container"> <!-- ISTRUZIONI -->
+          <div class="just-bordered instruction-label">{{ store.drinkView['strInstructionsIT'] }}</div>
         </div>
       </div>
     </div>
@@ -116,4 +134,9 @@
     width: 100%;
     padding: 2px 10px;
   }
+
+.fit-img{
+  height: 100%;
+  width: 100%;
+}
 </style>

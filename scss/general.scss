@@ -5,3 +5,7 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 //importare, nel formato scritto nella riga seguente, il font da usare
 //@import url('URL DEL FONT');
+
+body{
+    background-color: $color-section-dark;
+}
