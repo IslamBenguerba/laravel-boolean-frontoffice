@@ -5,27 +5,27 @@ export default {
             team: [
                 {
                     name: "Riccardo Carluccio",
-                    position: "Jr Full Stack Developer",
+                    position: "Allevatore di Struzzi",
                     image: "src/assets/imgs/riccardo.webp",
                 },
                 {
                     name: "Islam Benguerba",
-                    position: "Jr Full Stack Developer",
+                    position: "Ballatore di Fresca",
                     image: "src/assets/imgs/islam.jpg",
                 },
                 {
                     name: "Ludovico Pellecchia",
-                    position: "Jr Full Stack Developer",
+                    position: "Consumatore di Formaggio",
                     image: "src/assets/imgs/ludovico.webp",
                 },
                 {
                     name: "Alessandro Storchi",
-                    position: "Jr Full Stack Developer",
+                    position: "Fonico Audio",
                     image: "src/assets/imgs/alessandro.JPG",
                 },
                 {
                     name: "Pietro Fiori",
-                    position: "Jr Full Stack Developer",
+                    position: "Spingitore di Cavalieri",
                     image: "src/assets/imgs/pietro.jpg",
                 },
             ],
