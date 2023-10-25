@@ -21,7 +21,7 @@ export default {
         },
         { instruction: "instruction" },
       ],
-      drink: null,
+      // drink: null,
       store
     };
   },
@@ -32,6 +32,7 @@ export default {
   <div class="cocktail-preview-main-container"> <!-- :class="{'hidden': isActive}" @toggle-hidden="toggleHidden" -->
     <div class="cocktail-img-container">
       <!-- <img :src="store.strDrinkThumb" alt="" v-if="drink !== null"> -->
+      <img :src="store.drinkView.strDrinkThumb" alt="" v-if="store.drinkView !== null">
     </div>
 
     <div class="cocktail-data-container" v-if="store.drinkView !== null">
@@ -50,59 +51,13 @@ export default {
           <h3>Istruzioni</h3>
           {{ store.drinkView['strInstructionsIT'] }}
         </div>
-
-        <!-- <div v-for="subitem in item.mainInfos">
-          <div v-for="value in subitem">
-            {{ value }}
-          </div>
-        </div> -->
-
-        <!-- <div v-for="subitem in item.ingredients">
-          <div v-for="value in subitem">
-            {{ value }}
-          </div>
-        </div> -->
-
       </div>
     </div>
   </div>
 
   <div class="space-divisor"></div>
 
-  <!-- <MediumCard @click="toggleHidden"></MediumCard>       questo funziona. Quello dentro al componente no-->
-  <!-- import MediumCard from './MediumCard.vue';
-import { store } from '../store';
-export default {
-  components: {
-    MediumCard,
-  },
-  data() {
-    return {
-      nome: store.nomeCocktail
-    };
-  },
-  methods: {
-    toggleHidden() {
-      //con questa funzione possiamo usare la variabile nello store comandada da ogni singola card 
-      store.toggleList
-      console.log(store.toggleList)
-      return store.toggleList
-    },
-    closePreviw() {
-      store.toggleList = false
-    }
-  }
-} -->
-  <!-- </script> -->
-
-  <!-- <template>
-  <div class="cocktail-preview-main-container" v-if="toggleHidden()">
-    <button @click="closePreviw()">chiudi</button>
-    {{ nome }}
-  </div>
-
-  <MediumCard @click="toggleHidden"></MediumCard>       questo funziona. Quello dentro al componente no -->
-</template>
+  </template>
 
 <style scoped lang="scss">
 @use "../../scss/partials/mixins" as *;
