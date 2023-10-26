@@ -31,6 +31,8 @@ export default {
   </div>
   <TheFooter></TheFooter>
 
+  hello world
+
 </template>
 
 <style lang="scss">
