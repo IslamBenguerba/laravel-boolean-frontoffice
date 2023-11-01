@@ -24,7 +24,7 @@
         <div class="info-container" v-for="(item, index) in details">
           {{ index }} {{ item.detail }}
         </div>
-        <div class="hidden-container"></div>
+        <div class="hidden-container">asdasdasdadad</div>
       </div>
     </div>
 
